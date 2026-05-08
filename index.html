@@ -1,87 +1,136 @@
 <html>
 <head>
-    <title>Animaciones CS3</title>
-    <style>
-        *{
-            margin:0px;
-            padding:0px;
-        }
-        .contenedor{
-            width:400px;
-            height: 200px;
-            border:1px solid black;
-            position:relative;/*provoca el centrado del div contenedor*/
-            margin: 0 auto;/*provoca el centrado del div contenedor*/
-            overflow:hidden;
-            background-image: url(img/campo.avif);
-            background-size: cover;
-        }
-        .cuadrito{
-            width: 50px;
-            height: 50px;
-            position:absolute;
-            left:-100px;
-            top:50px;
-            animation: cuadrito 3s infinite;
-        }
-        .cuadrito2{
-            width: 50px;
-            height: 50px;
-            position:absolute;
-            left:-100px;
-            top:50px;
-            animation: cuadrito2 5s infinite 1s; 
-        }
-        @keyframes cuadrito{
-            0%{
-                left:-50px;
-                top:150px;
-                rotate:0deg;
-            }
-            50%{
-                left:175px;
-                top:0px;
-                rotate:60deg;
-            }
-            100%{
-                left:400px;
-                top:150px;
-                rotate:0deg;
-            }
+<title>TURISMO DEL PERU</title>
 
-        }
-        @keyframes cuadrito2{
-           0%{
-                left:-50px;
-                top:0px;
-                rotate:0deg;
-            }
-            50%{
-                left:175px;
-                top:150px;
-                rotate:60deg;
-            }
-            100%{
-                left:400px;
-                top:0px;
-                rotate:0deg;
-            } 
-        } 
-        .cuadrito img{
-            width: 50%;
-            height: 50%;
-        } 
-        .cuadrito2 img{
-           width: 50%;
-            height: 50%; 
-        }
-    </style>
+<style>
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.contenedor{
+    width: 600px;
+    height: 300px;
+    border: 1px solid black;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.tarjeta1, .tarjeta2, .tarjeta3{
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    background-size: cover;
+}
+
+
+.tarjeta1{
+    background-image: url(img/html.jpg);
+    top: -300px;
+    left: 0px;
+    animation: tarjeta1 3s 1 forwards;
+}
+
+
+.tarjeta2{
+    background-image: url(img/css.jpg);
+    top: 300px;
+    left: 200px;
+    animation: tarjeta2 3s 1 forwards 3s;
+}
+
+.tarjeta3{
+    background-image: url(img/js.jpg);
+    top: 0px;
+    left: 600px;
+    animation: tarjeta3 3s 1 forwards 6s;
+}
+
+@keyframes tarjeta1{
+
+    0%{
+        top: -300px;
+        left: 0px;
+        transform: rotateY(180deg);
+    }
+
+    50%{
+        top: 300px;
+        left: 0px;
+    }
+
+    100%{
+        top: 0px;
+        left: 0px;
+    }
+}
+
+@keyframes tarjeta2{
+
+    0%{
+        top: 300px;
+        left: 200px;
+        transform: rotateY(180deg);
+    }
+
+    50%{
+        top: -300px;
+        left: 200px;
+    }
+
+    100%{
+        top: 0px;
+        left: 200px;
+    }
+}
+
+@keyframes tarjeta3{
+
+    0%{
+        top: 0px;
+        left: 600px;
+        transform: rotateY(180deg);
+    }
+
+    50%{
+        top: 0px;
+        left: -300px;
+    }
+
+    100%{
+        top: 0px;
+        left: 400px;
+    }
+}
+
+/* EVENTOS */
+.tarjeta1:hover{
+    transition: 1s;
+    scale:1.2;
+    z-index: 1;
+}
+.tarjeta2:hover{
+    transition: 1s;
+    scale:1.2;
+    z-index: 1;
+}
+.tarjeta3:hover{
+    transition: 1s;
+    scale:1.2;
+    z-index: 1;
+}
+
+</style>
 </head>
+
 <body>
-    <div class="contenedor">
-        <div class="cuadrito"> <img src="img/abeja.webp" alt=""></div>
-        <div class="cuadrito2"> <img src="img/abejita.webp" alt=""></div>
-       
-    </div>
+
+<div class="contenedor">
+    <div class="tarjeta1"></div>
+    <div class="tarjeta2"></div>
+    <div class="tarjeta3"></div>
+</div>
+
 </body>
 </html>
