@@ -1,8 +1,9 @@
 <html>
 <head>
-<title>TURISMO DEL PERU</title>
+<title>TECNOLOGIAS DE UNA PAGINA WEB</title>
 
 <style>
+
 *{
     padding: 0px;
     margin: 0px;
@@ -24,14 +25,12 @@
     background-size: cover;
 }
 
-
 .tarjeta1{
     background-image: url(img/html.jpg);
     top: -300px;
     left: 0px;
     animation: tarjeta1 3s 1 forwards;
 }
-
 
 .tarjeta2{
     background-image: url(img/css.jpg);
@@ -47,6 +46,8 @@
     animation: tarjeta3 3s 1 forwards 6s;
 }
 
+/*RICAS ANIMACIONES*/
+
 @keyframes tarjeta1{
 
     0%{
@@ -54,18 +55,15 @@
         left: 0px;
         transform: rotateY(180deg);
     }
-
     50%{
-        top: 300px;
-        left: 0px;
+        top: 150px;
+        left: 50px;
     }
-
     100%{
         top: 0px;
         left: 0px;
     }
 }
-
 @keyframes tarjeta2{
 
     0%{
@@ -73,12 +71,10 @@
         left: 200px;
         transform: rotateY(180deg);
     }
-
     50%{
-        top: -300px;
-        left: 200px;
+        top: -150px;
+        left: 150px;
     }
-
     100%{
         top: 0px;
         left: 200px;
@@ -92,32 +88,33 @@
         left: 600px;
         transform: rotateY(180deg);
     }
-
     50%{
-        top: 0px;
-        left: -300px;
+        top: 100px;
+        left: 250px;
     }
-
     100%{
         top: 0px;
         left: 400px;
     }
 }
 
-/* EVENTOS */
+/*EVENTOS*/
+
 .tarjeta1:hover{
     transition: 1s;
-    scale:1.2;
+    scale: 1.2;
     z-index: 1;
 }
+
 .tarjeta2:hover{
     transition: 1s;
-    scale:1.2;
+    scale: 1.2;
     z-index: 1;
 }
+
 .tarjeta3:hover{
     transition: 1s;
-    scale:1.2;
+    scale: 1.2;
     z-index: 1;
 }
 
